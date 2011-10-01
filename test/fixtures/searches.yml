@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  query_description: MyText
+  email: MyString
+
+two:
+  query_description: MyText
+  email: MyString
