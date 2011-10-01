@@ -1,0 +1,12 @@
+1) Delayed JOBS
+script/rails generate delayed_job
+rake db:migrate
+
+# Runs two workers in separate processes.
+$ RAILS_ENV=production script/delayed_job -n 2 start
+$ RAILS_ENV=production script/delayed_job stop
+
+2) Starting application in Development mode
+For precompiling the assets
+bundle exec rake assets:precompile
+

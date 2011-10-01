@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User name:</b>
+  <%= @query.user_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @query.email %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @query.question %>
+</p>
+
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', queries_path %>
