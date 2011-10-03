@@ -11,19 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+<!--  <div class="field">
     <%= f.label :user_name %><br />
     <%= f.text_field :user_name %>
+  </div>-->
+	
+  <div class="field img" align="center">
+    <%= image_tag "search.jpg" %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+  
+  <div class="field txtarea" align="center">
+  	<%= f.text_field :question, :value => 'Enter your query here', :class => 'query_eml', :size => 100 %>
+    <!--<%= f.text_area :question, :rows => 1, :cols => "150", :value => 'Enter your query here', :class => 'query_eml' %>-->
   </div>
-  <div class="field">
-    <%= f.label :question %><br />
-    <%= f.text_area :question %>
+  
+  <div class="field eml" align="center">
+    <%= f.text_field :email, :value => 'john@example.com', :class => 'query_eml' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+    
+  <div class="actions submt_btn" align="center">
+    <%= f.submit :value => 'Search' %>
   </div>
 <% end %>

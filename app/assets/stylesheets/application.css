@@ -5,3 +5,11 @@
  *= require_self
  *= require_tree . 
 */
+
+/*.txtarea{margin-top:275px;}*/
+.eml{margin-top:33px;}
+.submt_btn{margin-top:24px;}
+
+.query_eml{color:#CCCCCC; font-style:italic;}
+
+.img{}
