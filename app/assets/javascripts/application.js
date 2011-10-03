@@ -7,51 +7,58 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+  $("#query_question").watermark("Enter your query here");
+  $("#query_email").watermark("john@example.com");
+});
 
+/*
 $(function(){
-	$('#query_email').click(function(){		
+	$('#query_email').click(function(){
 		if($(this).val() == 'john@example.com'){
-			$(this).val('');			
+			$(this).val('');
 			$(this).removeClass('query_eml');
-		}	
+		}
 	});
-	
+
 	$('#query_question').click(function(){
 		if($(this).val() == 'Enter your query here'){
 			$(this).val('');
 			$(this).removeClass('query_eml');
-		}	
-	});	
-	
-	$('#query_email').mouseout(function(){	
+		}
+	});
+
+	$('#query_email').mouseout(function(){
 		email_field_class($(this));
 	});
-	
-	$('#query_question').mouseout(function(){	
+
+	$('#query_question').mouseout(function(){
 		question_field_class($(this));
 	});
-	
-	$('#query_email').keyup(function(){	
+
+	$('#query_email').keyup(function(){
 		email_field_class($(this));
 	});
-	
-	$('#query_question').keyup(function(){	
+
+	$('#query_question').keyup(function(){
 		question_field_class($(this));
 	});
-	
-	
+
+
 });
 
 function email_field_class(obj){
 	if (obj.val().length == 0) {
-		obj.val('john@example.com');	
-		obj.addClass('query_eml');		
-	}	
+		obj.val('john@example.com');
+		obj.addClass('query_eml');
+	}
 }
 
 function question_field_class(obj){
 	if (obj.val().length == 0) {
-		obj.val('Enter your query here');	
-		obj.addClass('query_eml');		
-	}	
+		obj.val('Enter your query here');
+		obj.addClass('query_eml');
+	}
 }
+*/
+

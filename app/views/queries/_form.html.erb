@@ -1,5 +1,6 @@
 <%= form_for(@query) do |f| %>
-  <% if @query.errors.any? %>
+
+  <% if false #@query.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@query.errors.count, "error") %> prohibited this query from being saved:</h2>
 
@@ -10,26 +11,28 @@
       </ul>
     </div>
   <% end %>
-
 <!--  <div class="field">
     <%= f.label :user_name %><br />
     <%= f.text_field :user_name %>
   </div>-->
-	
+
   <div class="field img" align="center">
     <%= image_tag "search.jpg" %>
   </div>
-  
+
   <div class="field txtarea" align="center">
-  	<%= f.text_field :question, :value => 'Enter your query here', :class => 'query_eml', :size => 100 %>
+  	<%= f.text_field :question, :class => 'query_eml', :size => 100 %>
+  	<%= error_message_on "query", "question" %>
     <!--<%= f.text_area :question, :rows => 1, :cols => "150", :value => 'Enter your query here', :class => 'query_eml' %>-->
   </div>
-  
+
   <div class="field eml" align="center">
-    <%= f.text_field :email, :value => 'john@example.com', :class => 'query_eml' %>
+    <%= f.text_field :email, :class => 'query_eml' %>
+    <%= error_message_on "query", "email" %>
   </div>
-    
+
   <div class="actions submt_btn" align="center">
     <%= f.submit :value => 'Search' %>
   </div>
 <% end %>
+
