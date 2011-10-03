@@ -44,7 +44,7 @@ class QueriesController < ApplicationController
 
     respond_to do |format|
       if @query.save
-        :notice => 'Query was successfully created.'
+        flash[:notice] = 'Query was successfully created.'
         format.html { render action: "new" }
         #format.html { redirect_to new_path, notice: 'Query was successfully created.' }
         #format.json { render json: @query, status: :created, location: @query }
