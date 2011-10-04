@@ -1,0 +1,13 @@
+= form_for(@query) do |f|
+  = alert_message(flash)
+  .field.img{:align => "center"}
+    = image_tag "search.jpg"
+  .field.txtarea{:align => "center"}
+    = f.text_field :question, :size => 100
+    = error_message_on "query", "question"
+  .field.eml{:align => "center"}
+    = f.text_field :email
+    = error_message_on "query", "email"
+  .actions.submt_btn{:align => "center"}
+    = f.submit 'Search'
+

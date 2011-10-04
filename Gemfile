@@ -21,7 +21,7 @@ end
 
 gem 'jquery-rails'
 gem "delayed_job"
-
+gem 'haml'
 # Use unicorn as the web server
 # gem 'unicorn'
 
