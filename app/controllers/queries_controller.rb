@@ -6,7 +6,7 @@ class QueriesController < ApplicationController
   def create
     @query = Query.new(params[:query])
     if @query.save
-      flash[:notice] = 'Query successfully submitted. Please check your provided email to confirm'
+      flash[:notice] = 'Please check your Mailbox'
     else
       flash[:error] = 'Please enter details.'
     end
