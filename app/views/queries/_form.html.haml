@@ -5,8 +5,9 @@
     = f.text_field :question, :size => 100
     = error_message_on "query", "question"
   .field.eml{:align => "center"}
-    = f.text_field :email
+    = f.text_field :email, :style => "width:30%"
     = error_message_on "query", "email"
   .actions.submt_btn{:align => "center"}
-    = f.submit 'Search'    
+    = f.submit 'Search'
   = alert_message(flash)
+

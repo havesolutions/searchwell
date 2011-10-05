@@ -22,6 +22,8 @@ end
 gem 'jquery-rails'
 gem "delayed_job"
 gem 'haml'
+gem 'activeadmin'
+gem "meta_search",    '>= 1.1.0.pre'
 # Use unicorn as the web server
 # gem 'unicorn'
 
