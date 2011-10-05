@@ -11,19 +11,18 @@
 .submt_btn{margin-top:24px;}
 
 .query_eml{color:#CCCCCC; font-style:italic;}
-input { color: black;}
 #flash {
   color: #426A15;
   font-size: 14px;
   font-weight: 700;
   margin: 10px;
   padding: 12px 6px 13px 40px;
-  text-align: left;
+  text-align: center;
 }
 .notice {
-    background: url("/assets/tick.png") no-repeat scroll 7px center transparent;
+    background: url("/assets/tick.png") no-repeat scroll 380px center transparent;
 }
 .error {
-    background: url("/assets/cross.png") no-repeat scroll 7px center transparent;
+    background: url("/assets/cross.png") no-repeat scroll 570px center transparent;
 }
 
