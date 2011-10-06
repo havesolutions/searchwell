@@ -8,8 +8,9 @@
 //= require jquery_ujs
 //= require_tree .
 $(document).ready(function(){
-  $("#query_question").watermark("Enter your query here");
+  $("#query_question").watermark("Type your Query here...");
   $("#query_email").watermark("john@example.com");
+	setTimeout(hideFlashMessages, 5000);
 });
 
 /*
@@ -62,3 +63,7 @@ function question_field_class(obj){
 }
 */
 
+
+function hideFlashMessages(){
+	$('div.notice, div.warning, div.error').fadeOut()
+}
