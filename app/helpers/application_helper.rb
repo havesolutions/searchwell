@@ -7,5 +7,13 @@ module ApplicationHelper
       content_tag(:div, msg, :id => "flash", :class => "error")
     end
   end
+  
+  def automatic_flash(flash) 
+    flash.each do |key, msg| 
+      return content_tag :p, msg, :id => key 
+    end 
+  end
 end
+
+
 

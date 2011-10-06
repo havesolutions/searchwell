@@ -1,16 +1,17 @@
 class QueriesController < ApplicationController
   def new
-    @query = Query.new
+    @query = Query.new(params[:query])
   end
 
   def create
     @query = Query.new(params[:query])
     if @query.save
-      flash[:notice] = 'Please check your Mailbox'
+      flash[:notice] = "Please Check Your Mailbox"#fading_flash_message("Please check your Mailbox", 5)
     else
-      flash[:error] = 'Please enter details.'
+      @error_prams = params[:query]
+      flash[:error] = "Please Enter Details."#fading_flash_message("Please enter details.", 5)
     end
-    redirect_to root_path
+     redirect_to root_path(:query => @error_prams)
   end
 end
 

@@ -12,11 +12,11 @@
 
 .query_eml{color:#CCCCCC; font-style:italic;}
 #flash {
-  color: #426A15;
+  color: #FF0000;
   font-size: 14px;
   /*font-weight: 700;*/
   margin: 10px;
-  padding: 12px 6px 13px 40px;
+  /*padding: 12px 6px 13px 40px;*/
   text-align: center;
 }
 /*.notice {
