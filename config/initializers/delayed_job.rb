@@ -1,4 +1,4 @@
-rake_task = !Rake.blank? rescue true
+rake_task = !Rake.blank? rescue false
 DELAYED_JOB_PID_PATH = "#{Rails.root}/tmp/pids/delayed_job.pid"
 if Rails.env.production? && !rake_task
   if !File.exist?(DELAYED_JOB_PID_PATH)
