@@ -6,7 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//require_tree .
 $(document).ready(function(){
   $("#query_question").watermark("Enter your query here");
   $("#query_email").watermark("john@example.com");

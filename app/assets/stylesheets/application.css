@@ -3,7 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree .
+ * require_tree .
 */
 
 /*.txtarea{margin-top:275px;}*/
@@ -18,6 +18,24 @@
   margin: 10px;
   /*padding: 12px 6px 13px 40px;*/
   text-align: center;
+}
+input[type="submit"] {
+    background: -moz-linear-gradient(-90deg, #838A90, #414549) repeat scroll 0 0 transparent;
+    border: medium none;
+    border-radius: 200px 200px 200px 200px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+    color: #EFEFEF;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 3px;
+    padding: 0.6em 1.4em 0.5em 1.3em;
+    text-decoration: none;
+    text-shadow: 0 1px 0 black;
+}
+input[type="submit"]:hover {
+    box-shadow: 0 1px 3px #888888;
+    color: #FFFFFF;
 }
 /*.notice {
     background: url("/assets/tick.png") no-repeat scroll 555px center transparent;
