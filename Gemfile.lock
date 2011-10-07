@@ -158,6 +158,7 @@ DEPENDENCIES
   delayed_job
   execjs
   haml
+  inherited_resources
   jquery-rails
   meta_search (>= 1.1.0.pre)
   mysql2

@@ -8,6 +8,7 @@ gem 'rails', '3.1.0'
 gem 'mysql2'
 gem 'execjs'
 gem 'therubyracer'
+gem 'inherited_resources'
 # bundle exec rake assets:precompile
 
 
