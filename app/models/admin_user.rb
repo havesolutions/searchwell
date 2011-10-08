@@ -6,7 +6,7 @@ class AdminUser < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-
+  cattr_accessor :current_user
   def is_normal_user?
     !is_normal_user
   end

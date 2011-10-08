@@ -1,4 +1,5 @@
 class QueriesController < ApplicationController
+  layout "search"
   def new
     @query = Query.new(params[:query])
   end
@@ -11,7 +12,14 @@ class QueriesController < ApplicationController
       @error_prams = params[:query]
       flash[:error] = "Please enter correct details."#fading_flash_message("Please enter details.", 5)
     end
-     redirect_to root_path(:query => @error_prams)
+    redirect_to root_path(:query => params[:query])
+  end
+
+  def deliver_solution
+    query = Query.find(params[:id])
+    query.deliver_solution_email
+    flash[:notice] = "Solution Email sent Successfully"
+    redirect_to admin_questions_path
   end
 end
 

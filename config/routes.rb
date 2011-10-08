@@ -3,7 +3,11 @@ Registration::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :queries
+  resources :queries do
+    member do
+      get 'deliver_solution'
+    end
+  end
   root :to => 'queries#new'
 
 

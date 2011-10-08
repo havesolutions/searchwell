@@ -7,7 +7,6 @@ class Query < ActiveRecord::Base
 
   after_create :send_notification_mail
   before_save :set_is_solved
-  #after_update :send_email_with_solution
 
   def resolved
     is_solved ? "Yes" : "No"
@@ -17,17 +16,23 @@ class Query < ActiveRecord::Base
     !is_solved
   end
 
+  def deliver_solution_email
+    Mailer.delay(:run_at => (Time.now + 5.seconds)).solution_email(self) unless solution.blank?
+#    Mailer.solution_email(self).deliver unless solution.blank?
+    update_attribute(:mail_sent, true)
+  end
+
   private
   def send_notification_mail
     Mailer.delay(:run_at => (Time.now + 5.seconds)).notification_email(self)
   end
 
   def set_is_solved
-    self.is_solved = !solution.blank?
-  end
-
-  def send_email_with_solution
-    # Send email if Solution is not blank?
+    unless solution.blank?
+      self.is_solved = true
+      self.solved_at = Time.now
+      self.solved_by = AdminUser.current_user.id
+    end
   end
 
 end
